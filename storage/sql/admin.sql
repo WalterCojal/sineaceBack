@@ -20,6 +20,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 -- Table structure for admin
 -- ----------------------------
+/***
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -36,7 +37,7 @@ CREATE TABLE `admin`  (
   `updated_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
-
+***/
 -- --------------------------- --------------------------- --------------------------- --------------------------- -------------------------
 
 DROP TABLE IF EXISTS `generals`;
@@ -60,7 +61,7 @@ CREATE TABLE `generals`  (
   `p096_2` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci,
   `p096_3` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci,
   `status` tinyint(1) NOT NULL DEFAULT 0,
-  `encuestador` int(11) NOT NULL DEFAULT 0,
+  `encuestador_id` int(11) NOT NULL DEFAULT 0,
   `created_at` datetime(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`id`) USING BTREE
